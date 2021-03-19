@@ -188,3 +188,34 @@ footer a:hover::before {
     transform: rotate(0deg);
   }
 }
+
+@media (max-width: 500px) {
+  .container {
+    height: 100vh;
+    grid-template-areas:
+      'intro'
+      'subscribe'
+      'about';
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 33%);
+    border-radius: 0;
+  }
+
+  #subscribe,
+  #about,
+  #intro {
+    padding: 20px 20px 30px;
+  }
+
+  #about ul {
+    font-size: 15px;
+  }
+
+  button:hover {
+    animation: none;
+  }
+
+  footer {
+    display: none;
+  }
+}
